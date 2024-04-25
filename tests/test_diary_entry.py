@@ -25,6 +25,21 @@ def test_reading_time_three_words():
     result = diary_entry.reading_time(2)
     assert result == 2
 
-def test_reading_chunk():
-    pass
+
+def test_reading_chunk_multiple_times():
+    diary_entry = DiaryEntry("My Title", "one two three four five six")
+    assert diary_entry.reading_chunk(2, 1) == "one two"
+    assert diary_entry.reading_chunk(1, 1) == "three"
+
+   
+def test_reading_chunk_wraps_multiple_calls_restart():
+    diary_entry = DiaryEntry("My Title", "one two three four five six")
+    assert diary_entry.reading_chunk(
+        3, 2) == "one two three four five six"
+    assert diary_entry.reading_chunk(2, 1) == "one two"
+
+
+
+
+    
 

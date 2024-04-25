@@ -1,7 +1,5 @@
-def say_hello(name):
-    return f"hello {name}"
-
-
+# def say_hello(name):
+#     return f"hello {name}"
 # Intended output:
 #
 # > say_hello("kay")
