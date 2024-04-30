@@ -1,5 +1,8 @@
-import sys
 import os
-current_path = os.path.dirname(os.path.abspath(__file__))
-lib_path = os.path.join(current_path, 'lib')
-sys.path.append(lib_path)
+import sys
+
+# Get the parent directory of the test directory
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+# Add the parent directory to the Python path
+sys.path.append(parent_dir)
